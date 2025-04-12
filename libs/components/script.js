@@ -1,6 +1,18 @@
-const menuBtn = document.querySelector('.menu-icon')
-const navlinks = document.querySelector('.nav-links')
-menuBtn.addEventListener('click', () => {
+const menuBtn = document.querySelector('.menu-icon');
+const navclose = '../icons/menu-close.svg'
+const navopen = document.getElementById('menu-open')
+const navlinks = document.querySelector('.nav-links');
+const body = document.body;
+
+
+menuBtn.addEventListener('click', (e) => {
+    e.preventDefault()
     navlinks.classList.toggle('mobile-menu')
-    menuBtn.display = '/libs/icons/menu-close.svg'
+    if(menuBtn == true){
+        body.style.overflowY = 'hidden'
+    }
+    else{
+        body.style.overflowY = 'auto'
+    }
+    
 })
